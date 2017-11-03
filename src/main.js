@@ -8,6 +8,5 @@ function testVar(option) {
     
   } else {
     console.log(otherVar);
-    
   }
 }
