@@ -1,9 +1,15 @@
-let message = 'Mensaje del alert';
+function getPerson() {
+  let name = 'John';
+  let age = 25;
 
-let template = `
-  <div class="alert">
-    <p>${message}</p>
-  </div>
-`;
+  return {
+    name: name,
+    age: age,
 
-console.log(template);
+    greet: function() {
+      return 'Hello, ' + this.name;
+    },
+  };
+}
+
+console.log(getPerson().greet());
