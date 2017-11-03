@@ -1,18 +1,20 @@
-class User {
-  constructor(name, isAdmin) {
-    this.name = name;
-    this.isAdmin = isAdmin;
-  }
-}
+import TaskCollection, {greet, name} from './TaskCollection.js';
+import {Task} from './Task.js';
 
-let users = [
-  new User('Pepe', false),
-  new User('Juan', true),
-  new User('Felipe', false),
-  new User('Jose', true),
-];
-
-console.log(
-    users.find(user => user.isAdmin),
-    users.findIndex(user => user.isAdmin),
+let collection = new TaskCollection(
+    new Task('Send an email'),
+    new Task('Go to the store'),
+    new Task('Drink coffee'),
 );
+
+console.log(collection);
+console.log(greet);
+console.log(name);
+
+/*******************************/
+
+import * as api from './api.js';
+
+api.getUsers();
+api.getUser(1);
+api.updateUser(1, {});
