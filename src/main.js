@@ -12,10 +12,10 @@ console.log('rest', sum(1, 2, 3));
 /**************************************
  SPREAD
  *******************/
-function sumTwo(x, y) {
+function sumOnlyTwoNumbers(x, y) {
   return x + y;
 }
 
 let numbers = [1, 2];
 
-console.log('spread', sumTwo(...numbers));
+console.log('spread', sumOnlyTwoNumbers(...numbers));
