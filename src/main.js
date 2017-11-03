@@ -1,24 +1,32 @@
-function getPerson() {
-  let name = 'John';
-  let age = 25;
+let name = 'Peter Pan';
 
-  return {
-    name: name,
-    age: age,
+/*
+ * String includes another string
+ */
 
-    greet: function() {
-      return 'Hello, ' + this.name;
-    },
-  };
+//ES5
+if (name.indexOf('Pan') !== -1) {
+  console.log('el string tiene la palabra Pan');
 }
 
-let person = getPerson();
-console.log(person.greet());
+//ES6
+if (name.includes('Pan')) {
+  console.log('el string tiene la palabra Pan');
+}
 
-// Object Destructuring
-// function sayAge(person) {
-//   let {name, age} = person;
-//
-//   console.log(`${name} is ${age} years old`);
-// }
-// sayAge(person);
+/*
+ * String starts with another string
+ */
+
+//ES5
+if (name.indexOf('Peter') !== 0) {
+  console.log('el string empieza con la palabra Peter');
+}
+
+//ES6
+if (name.startsWith('Peter')) {
+  console.log('el string empieza con la palabra Peter');
+}
+if (name.endsWith('Pan')) {
+  console.log('el string termina con la palabra Pan');
+}
