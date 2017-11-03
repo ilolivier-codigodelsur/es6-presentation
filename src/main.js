@@ -1,32 +1,18 @@
-let name = 'Peter Pan';
-
-/*
- * String includes another string
- */
-
-//ES5
-if (name.indexOf('Pan') !== -1) {
-  console.log('el string tiene la palabra Pan');
+class User {
+  constructor(name, isAdmin) {
+    this.name = name;
+    this.isAdmin = isAdmin;
+  }
 }
 
-//ES6
-if (name.includes('Pan')) {
-  console.log('el string tiene la palabra Pan');
-}
+let users = [
+  new User('Pepe', false),
+  new User('Juan', true),
+  new User('Felipe', false),
+  new User('Jose', true),
+];
 
-/*
- * String starts with another string
- */
-
-//ES5
-if (name.indexOf('Peter') !== 0) {
-  console.log('el string empieza con la palabra Peter');
-}
-
-//ES6
-if (name.startsWith('Peter')) {
-  console.log('el string empieza con la palabra Peter');
-}
-if (name.endsWith('Pan')) {
-  console.log('el string termina con la palabra Pan');
-}
+console.log(
+    users.find(user => user.isAdmin),
+    users.findIndex(user => user.isAdmin),
+);
