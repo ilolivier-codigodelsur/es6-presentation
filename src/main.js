@@ -12,4 +12,13 @@ function getPerson() {
   };
 }
 
-console.log(getPerson().greet());
+let person = getPerson();
+console.log(person.greet());
+
+// Object Destructuring
+// function sayAge(person) {
+//   let {name, age} = person;
+//
+//   console.log(`${name} is ${age} years old`);
+// }
+// sayAge(person);
